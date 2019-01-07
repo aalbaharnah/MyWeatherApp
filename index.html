@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="MyWeatherApp">
+
+<head>
+    <title>My Weather App</title>
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="Scripts/angular.min.js"></script>
+    <script src="app/app.js"></script>
+</head>
+
+<body ng-controller="MyWeatherController">
+    <div class="header">
+        <input type="text" placeholder="City" ng-model="cityName">
+        <button class="button button2">Search</button>
+    </div>
+    
+    <div class="row">
+        <div class="column" style="background-color:rgb(255, 255, 255);"></div>
+        <div class="column" style="background-color:#bbb;">
+            <ul>
+                Name:
+                <p class="animated infinite pulse delay-2s">{{ cityData }} </p>
+                Temp: 
+                <p class="animated infinite bounce delay-2s"> {{ cityTemp }} </p>
+            </ul>
+        </div>
+        <div class="column" style="background-color:rgb(255, 255, 255);"></div>
+    </div>
+          
+
+    
+    
+
+</body>
+
+</html>
