@@ -1,58 +1,157 @@
 * {
-    box-sizing: border-box;
+    box-sizing: inherit;
+    font-size: inherit;
+    padding: 0;
+    margin: 0;
   }
   
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  /* Style the header */
-  .header {
-    background-color: #f1f1f1;
-    padding: 30px;
-    text-align: center;
-    font-size: 80px;
-  }
-  
-  /* Create three equal columns that floats next to each other */
-  .column {
-    float: left;
-    width: 33.33%;
-    padding: 10px;
-    height: 600px; /* Should be removed. Only for demonstration */
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Style the footer */
-  .footer {
-    background-color: #f1f1f1;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-  @media (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
+html{
+  font-size: 62.5%;
+}
 
-    .button2 {
-        background-color: white;
-        border-radius: 4px; 
-        color: black; 
-        border: 2px solid #008CBA;
-    }
+body {
+  position: relative;
+  height: 100vh;
+  background-color: #ffe6e6;
+  animation: fadeIn 200ms ease-in-out;
+  backface-visibility: hidden;
+  font-family: 'Work Sans', sans-serif;
+  box-sizing: border-box;
+}
 
-    .button2:hover {
-        background-color: #008CBA;
-        border-radius: 4px;
-        color: white;
-    }
-      
+.box-container {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  border-radius: 20px;
+  width: 35rem;
+  height: 60rem;
+  box-shadow: 0 1.7rem 9rem rgba(11, 49, 38, 0.18);
+}
+
+.search-box{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ff8080;
+  height: 60px;
+  border-radius: 40px;
+  padding: 20px;
+}
+
+.search-btn{
+  position: relative;
+  color: #000000;
+  float: right;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ff8080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0px 0px 1px #f1f1f1;
+}
+
+.search-txt{
+  position: relative;
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 5px;
+}
+
+.text-box{
+  left: 8%;
+  position: absolute;
+  top: 25%;
+}
+
+.cName{
+  position: relative;
+  padding: 5%;
+  color: #ffc266;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 3.5rem;
+  letter-spacing: .2rem;
+  text-shadow: 0px 1px 4px rgb(122, 122, 122);
+  animation: fadeIn 700ms ease-out;
+  backface-visibility: hidden;
+}
+
+.cTemp{
+  width: 80%;
+  line-height: 3.6rem;
+  margin-top: 5rem;
+  margin-left: 5%;
+  color: #b36b00;
+  font-weight: 700;
+  font-size: 14rem;
+  letter-spacing: .1rem;
+  text-shadow: 0px 2px 8px rgb(122, 122, 122);
+  animation: fadeIn 600ms ease-out;
+  backface-visibility: hidden;
+}
+
+.down-text-box{
+  position: absolute;
+  top : 80%;
+  display: table;
+}
+
+.col{
+  float: left;
+  width: 33.33%;
+  padding: 20px;
+}
+
+.cHumidity{
+  color: #b36b00;
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: .2rem;
+  text-shadow: 0px 1px 0px rgb(122, 122, 122);
+  animation: fadeIn 700ms ease-out;
+  backface-visibility: hidden
+}
+
+
+@keyframes fadeIn {
+  0%{
+      opacity: 0;
+      transform: scale(0)
   }
+
+  100%{
+      transform: scale(1);
+  }
+}
+
+@keyframes fadeInRotate {
+  0%{
+      opacity: 0;
+      transform: scale(0);
+      transform: rotate(180deg)
+  }
+
+  100%{
+      transform: scale(1);
+  }
+}
+
+/* Media Query */
+
+@media only screen and (max-width:481px){
+  /* default iPad screens */
+  html{
+      font-size: 52.5%;
+  }
+}
