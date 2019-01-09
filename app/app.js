@@ -9,6 +9,8 @@ app.controller("MyWeatherController", function ($scope, $http) {
         $scope.cityTemp = response.data.current.temp_c + '°';
         $scope.cityWind = response.data.current.wind_kph +' kph';
         $scope.cityHumidity = response.data.current.humidity + '%';
+        $scope.cityIcon = response.data.current.condition.icon;
+        $scope.cityCondition = response.data.current.condition.text;
         });
     }
 });
