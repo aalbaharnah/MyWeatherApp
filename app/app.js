@@ -18,7 +18,7 @@ app.controller("MyWeatherController", function ($scope, $http) {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition((function(position){
                 console.log(position.coords.longitude.toFixed(4) + '    ' + position.coords.latitude.toFixed(4));
-                $http.get('http://api.apixu.com/v1/current.json?key=852bf53e45aa4d15a8c140018190901&q='+ position.coords.longitude.toFixed(4) + ',' + position.coords.latitude.toFixed(4)).then(function(some){
+                $http.get('http://api.apixu.com/v1/current.json?key=852bf53e45aa4d15a8c140018190901&q='+ position.coords.latitude.toFixed(4) + ',' + position.coords.longitude.toFixed(4)).then(function(some){
                 console.log(some.data);
                 });
             }));
