@@ -13,4 +13,21 @@ app.controller("MyWeatherController", function ($scope, $http) {
         $scope.cityCondition = response.data.current.condition.text;
         });
     }
+
+    $scope.findme = function () {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((function(position){
+                console.log(position.coords.longitude.toFixed(4) + '    ' + position.coords.latitude.toFixed(4));
+                $http.get('http://api.apixu.com/v1/current.json?key=965da890aeb6423f93781514190701&q='+ position.coords.longitude.toFixed(4) + ',' + position.coords.latitude.toFixed(4)).then(function(some){
+                console.log(some.data);
+                });
+            }));
+            console.log("yes")
+        } else {
+            console.log("geolocation is not supporter by this browser.");
+        }
+    }
+    
+    
+
 });
