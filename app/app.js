@@ -3,7 +3,7 @@ var app = angular.module("MyWeatherApp", []);
 app.controller("MyWeatherController", function ($scope, $http) {
     $scope.cityName = '';
     $scope.search = function () {
-        $http.get('http://api.apixu.com/v1/current.json?key=965da890aeb6423f93781514190701&q=' + $scope.cityName).then(function(response){
+        $http.get('http://api.apixu.com/v1/current.json?key=852bf53e45aa4d15a8c140018190901&q=' + $scope.cityName).then(function(response){
         console.log(response.data);    
         $scope.cityData = response.data.location.name;
         $scope.cityTemp = response.data.current.temp_c + '°';
@@ -18,7 +18,7 @@ app.controller("MyWeatherController", function ($scope, $http) {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition((function(position){
                 console.log(position.coords.longitude.toFixed(4) + '    ' + position.coords.latitude.toFixed(4));
-                $http.get('http://api.apixu.com/v1/current.json?key=965da890aeb6423f93781514190701&q='+ position.coords.longitude.toFixed(4) + ',' + position.coords.latitude.toFixed(4)).then(function(some){
+                $http.get('http://api.apixu.com/v1/current.json?key=852bf53e45aa4d15a8c140018190901&q='+ position.coords.longitude.toFixed(4) + ',' + position.coords.latitude.toFixed(4)).then(function(some){
                 console.log(some.data);
                 });
             }));
