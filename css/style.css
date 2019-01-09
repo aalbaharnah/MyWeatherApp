@@ -45,8 +45,8 @@ body {
   position: relative;
   color: #000000;
   float: right;
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 30px;
   border-radius: 50%;
   background: #ff8080;
   display: flex;
@@ -69,7 +69,7 @@ body {
 }
 
 .text-box{
-  left: 8%;
+  left: 4%;
   position: absolute;
   top: 25%;
 }
@@ -79,24 +79,22 @@ body {
   padding: 5%;
   color: #ffc266;
   text-transform: uppercase;
-  font-weight: 400;
-  font-size: 3.5rem;
-  letter-spacing: .2rem;
-  text-shadow: 0px 1px 4px rgb(122, 122, 122);
+  font-weight: 900;
+  font-size: 3.3rem;
+  letter-spacing: .1rem;
   animation: fadeIn 700ms ease-out;
   backface-visibility: hidden;
 }
 
 .cTemp{
   width: 80%;
-  line-height: 3.6rem;
+  line-height: 3rem;
   margin-top: 5rem;
   margin-left: 5%;
   color: #b36b00;
   font-weight: 700;
-  font-size: 14rem;
+  font-size: 10rem;
   letter-spacing: .1rem;
-  text-shadow: 0px 2px 8px rgb(122, 122, 122);
   animation: fadeIn 600ms ease-out;
   backface-visibility: hidden;
 }
@@ -118,7 +116,6 @@ body {
   font-weight: 400;
   font-size: 1.5rem;
   letter-spacing: .2rem;
-  text-shadow: 0px 1px 0px rgb(122, 122, 122);
   animation: fadeIn 700ms ease-out;
   backface-visibility: hidden
 }
